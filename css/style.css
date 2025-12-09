@@ -75,15 +75,16 @@ li :hover {
 
 
 /* button item */
-.butt {
+#butt {
     background-color: #4DEEA5;
     color: black;
+    height: fit-content;
     margin-left: 20px;
-    padding: 8px 14px; /* match padding */
+    padding: 4px 4px; /* match padding */
     border-radius: 4px;
     cursor: pointer;
 }
-.butt:hover {
+#butt:hover {
     background-color: #3CC28A;
     color: white;
 }
@@ -199,6 +200,9 @@ button{
   .event-card:active .event-info p,
   .event-card:active .btn-reg {
     opacity: 1;
+  }
+  navbar{
+    height: 10%;
   }
 }
 
