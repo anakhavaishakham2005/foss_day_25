@@ -7,7 +7,12 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    color: white;
 
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 .sec1 {
     height: 100%;
@@ -64,10 +69,10 @@ li :hover {
     transition: transform 0.3s;
     color: #4DEEA5;
 }
-
-.glow:hover {
+ navbar a:hover {
     text-shadow: 0 0 10px #4DEEA5, 0 0 20px #4DEEA5, 0 0 30px #4DEEA5;
 }
+
 
 /* button item */
 .butt {
@@ -176,10 +181,7 @@ li :hover {
     display: flex;
 }
 
-a{
-    text-decoration: none;
-    color: black;
-}
+
 
 button{
     padding: 10px 15px;
@@ -202,4 +204,17 @@ button{
 
 .one{
   margin-top: 40px;
+}
+
+li{
+  color: white;
+}
+
+footer{
+  height: 40px;
+  background-color: black;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;  
 }
