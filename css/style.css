@@ -44,7 +44,6 @@ body {
     color: white;
 }
 
-/* 🔥 FIX: Equal height + vertical centering */
 #nb .menu li {
     padding: 8px;
     display: flex;
@@ -113,6 +112,13 @@ li :hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.event-card:hover {
+  height: 350px;
+  width: 350px;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
 /* Poster always shows initially */
 .poster-wrap {
   height: 100%;
@@ -129,6 +135,7 @@ li :hover {
 
 /* Event info overlay (hidden at bottom) */
 .event-info {
+  
   position: absolute;
   bottom: -100%;      /* hidden fully below the card */
   left: 0;
@@ -137,24 +144,24 @@ li :hover {
   padding: 20px;
   text-align: center;
   background-color: rgba(14, 59, 46, 0.95);
-  
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   transition: bottom 0.4s ease, opacity 0.4s ease;
   opacity: 0;
 }
 
 /* Hover: slide the info up */
 .event-card:hover .event-info {
-  bottom: 0;          /* slides into place */
-  opacity: 1;
+  bottom: 0; 
+    opacity: 1;
+    margin: 30px auto;
 }
 
 /* Poster fades away */
 .event-card:hover .poster-wrap {
   opacity: 0;
+  z-index: -1000;
 }
 
 /* Fade in text & button */
@@ -182,4 +189,17 @@ button{
     cursor: pointer;
     color: black;
     font-size: larger;
+}
+
+
+/* On mobile, show on tap */
+@media (max-width: 768px) {
+  .event-card:active .event-info p,
+  .event-card:active .btn-reg {
+    opacity: 1;
+  }
+}
+
+.one{
+  margin-top: 40px;
 }
