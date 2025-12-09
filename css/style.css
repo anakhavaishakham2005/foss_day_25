@@ -2,14 +2,14 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-image: url('../assets/bg.jpg');
-    background-size: fill;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 
 }
-.sec {
+.sec1 {
     height: 100%;
     width: 90%;
     margin: auto;
@@ -28,9 +28,10 @@ body {
     top: 0;
     left: -20px;                 /* no need for -20px */
     width: 100%;
+    height: 10%;
     background-color: black;
-    height: 50px;
     display: flex;
+    font-size: x-large;
     justify-content: flex-end;
     align-items: center;
     z-index: 1000;
@@ -38,7 +39,7 @@ body {
 
 #nb .menu {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     list-style: none;
     color: white;
 }
@@ -50,9 +51,23 @@ body {
     align-items: center;
 }
 
+li :hover {
+    /* magnify by a percentage */
+    transform: scale(1.1);
+    transition: transform 0.3s;
+    text-shadow: 0 0 10px #4DEEA5, 0 0 20px #4DEEA5, 0 0 30px #4DEEA5;
+}
+
 /* glow item */
-#glow {
+.glow {
+    /* magnify by a percentage */
+    transform: scale(1.1);
+    transition: transform 0.3s;
     color: #4DEEA5;
+}
+
+.glow:hover {
+    text-shadow: 0 0 10px #4DEEA5, 0 0 20px #4DEEA5, 0 0 30px #4DEEA5;
 }
 
 /* button item */
@@ -79,4 +94,107 @@ body {
     font-size: 24px;
     letter-spacing: 2px;
     text-shadow: 0 0 10px white;
+}
+
+/* section background gradient */
+.sec {
+  padding: 60px 0;
+}
+
+/* Event Card */
+.event-card {
+height: 250px;
+    width:250px ;
+    margin: auto;
+  background-color: #0E3B2E;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  height: 50%px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover-grow */
+.event-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px #4DEEA5;
+}
+
+/* Image wrapper (fixed height) */
+.poster-wrap {
+  height: 60%;
+  overflow: hidden;
+  background: #000000;
+}
+
+.poster-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* makes all poster sizes fit */
+}
+
+/* Event info */
+.event-info {
+  height: 40%;
+  padding: 12px;
+  color: #FFFFFF;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Title */
+.event-info h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 18px;
+  color: #4DEEA5;
+  margin-bottom: 5px;
+}
+
+/* Button */
+.btn-reg {
+  margin-top: 8px;
+  display: inline-block;
+  background: #4DEEA5;
+  color: #000000;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-reg:hover {
+  background: #FFFFFF;
+}
+
+/* Hover overlay text (desktop) */
+.event-card:hover .event-info p,
+.event-card:hover .btn-reg {
+  opacity: 1;
+}
+.event-card:hover .poster-wrap{
+    opacity: 0;
+}
+
+.event-card:hover .event-info{
+    
+    margin-top: -150px;
+    transition: margin-top 0.3s ease;
+}
+/* Default hidden for mobile click behavior */
+.event-info p,
+.btn-reg {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* On mobile, show on tap */
+@media (max-width: 768px) {
+  .event-card:active .event-info p,
+  .event-card:active .btn-reg {
+    opacity: 1;
+  }
 }
