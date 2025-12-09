@@ -1,0 +1,82 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../assets/bg.jpg');
+    background-size: fill;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+.sec {
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container {
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+}
+#nb {
+    position: fixed;
+    top: 0;
+    left: -20px;                 /* no need for -20px */
+    width: 100%;
+    background-color: black;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1000;
+}
+
+#nb .menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    color: white;
+}
+
+/* 🔥 FIX: Equal height + vertical centering */
+#nb .menu li {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+/* glow item */
+#glow {
+    color: #4DEEA5;
+}
+
+/* button item */
+.butt {
+    background-color: #4DEEA5;
+    color: black;
+    margin-left: 20px;
+    padding: 8px 14px; /* match padding */
+    border-radius: 4px;
+    cursor: pointer;
+}
+.butt:hover {
+    background-color: #3CC28A;
+    color: white;
+}
+.foss-heading {
+    font-family: 'VT323', monospace;color: #dcf6eb;
+    font-size: 100px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px #20ef92;
+}
+.foss-subheading {
+    color: white;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px white;
+}
