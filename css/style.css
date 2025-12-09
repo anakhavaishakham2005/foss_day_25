@@ -100,101 +100,86 @@ li :hover {
 .sec {
   padding: 60px 0;
 }
-
 /* Event Card */
 .event-card {
-height: 250px;
-    width:250px ;
-    margin: auto;
+  height: 300px;
+  width: 300px;
+  margin: auto;
   background-color: #0E3B2E;
   border-radius: 16px;
   overflow: hidden;
   position: relative;
-  height: 50%px;
   box-shadow: 0 0 20px rgba(0,0,0,0.7);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover-grow */
-.event-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 25px #4DEEA5;
-}
-
-/* Image wrapper (fixed height) */
+/* Poster always shows initially */
 .poster-wrap {
-  height: 60%;
-  overflow: hidden;
-  background: #000000;
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.4s ease;
 }
 
 .poster-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;  /* makes all poster sizes fit */
+  object-fit: cover;
 }
 
-/* Event info */
-.event-info {
-  height: 40%;
-  padding: 12px;
-  color: #FFFFFF;
-  text-align: center;
 
+/* Event info overlay (hidden at bottom) */
+.event-info {
+  position: absolute;
+  bottom: -100%;      /* hidden fully below the card */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(14, 59, 46, 0.95);
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  transition: bottom 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
 }
 
-/* Title */
-.event-info h3 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 18px;
-  color: #4DEEA5;
-  margin-bottom: 5px;
-}
-
-/* Button */
-.btn-reg {
-  margin-top: 8px;
-  display: inline-block;
-  background: #4DEEA5;
-  color: #000000;
-  padding: 6px 14px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.btn-reg:hover {
-  background: #FFFFFF;
-}
-
-/* Hover overlay text (desktop) */
-.event-card:hover .event-info p,
-.event-card:hover .btn-reg {
+/* Hover: slide the info up */
+.event-card:hover .event-info {
+  bottom: 0;          /* slides into place */
   opacity: 1;
 }
-.event-card:hover .poster-wrap{
-    opacity: 0;
-}
 
-.event-card:hover .event-info{
-    
-    margin-top: -150px;
-    transition: margin-top 0.3s ease;
-}
-/* Default hidden for mobile click behavior */
-.event-info p,
-.btn-reg {
+/* Poster fades away */
+.event-card:hover .poster-wrap {
   opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
-/* On mobile, show on tap */
-@media (max-width: 768px) {
-  .event-card:active .event-info p,
-  .event-card:active .btn-reg {
-    opacity: 1;
-  }
+/* Fade in text & button */
+.event-info h3,
+.event-info p,
+.event-info .btn-reg {
+  opacity: 1;
+  transition: opacity 0.4s ease 0.15s;
+}
+
+.onerow{
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+button{
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-size: larger;
 }
