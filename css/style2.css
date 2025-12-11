@@ -1,0 +1,201 @@
+/* BODY & GLOBAL */
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url('../assets/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* NAVBAR */
+#nb {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    font-size: x-large;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1000;
+    padding: 0 20px;
+}
+
+#nb .menu {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    color: white;
+}
+
+#nb .menu li {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+}
+
+li:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+    text-shadow: 0 0 10px #4DEEA5, 0 0 20px #4DEEA5, 0 0 30px #4DEEA5;
+}
+
+/* HERO SECTION */
+.sec1 {
+    margin-top: 120px; /* space below navbar */
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+/* HEADINGS */
+.foss-heading {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 100px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px #20ef92;
+}
+
+.foss-subheading {
+    color: white;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px white;
+}
+
+/* SECTION BACKGROUND */
+.sec {
+    padding: 60px 0;
+    background: linear-gradient(to bottom, #000000, #088858 70%);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* EVENT CARDS */
+.event-card {
+    width: 300px;
+    max-width: 90%; /* responsive width */
+    margin: 20px auto;
+    background-color: #0E3B2E;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+/* Poster */
+.poster-wrap {
+    height: 60%;
+    width: 100%;
+    transition: opacity 0.4s ease;
+}
+
+.poster-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Event Info overlay */
+.event-info {
+    position: absolute;
+    top: 0;              /* keep it inside the card */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(14, 59, 46, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.event-card:hover .event-info {
+    opacity: 1;
+}
+
+.event-card:hover .poster-wrap {
+    opacity: 0;
+    z-index: -1;
+}
+
+.event-info h3,
+.event-info p,
+.event-info .btn-reg {
+    opacity: 1;
+    transition: opacity 0.4s ease 0.15s;
+}
+
+/* BUTTONS */
+button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-size: larger;
+}
+
+.btn-reg {
+    background-color: #000000;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn-reg:hover {
+    transform: scale(1.15);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .event-card {
+        width: 90%;
+        height: auto; /* allow height to expand */
+    }
+
+    .poster-wrap {
+        height: 200px; /* reasonable height for mobile */
+    }
+
+    .event-info {
+        position: relative;
+        opacity: 1;        /* show by default on mobile */
+        margin-top: 10px;
+        overflow-y: auto;
+        height: auto;
+    }
+}

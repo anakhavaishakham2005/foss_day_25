@@ -10,12 +10,13 @@ body {
     color: white;
 
 }
-
 /* Modal wrapper */
 .modal {
-  display: block;           /* show by default, change to none if you want JS trigger only */
+  display: flex;               /* flex for centering */
+  justify-content: center;     /* horizontal center */
+  align-items: center;         /* vertical center */
   position: fixed;
-  z-index: 9999;            /* above everything */
+  z-index: 9999;               /* above everything */
   left: 0;
   top: 0;
   width: 100%;
@@ -25,15 +26,13 @@ body {
 }
 
 /* Modal content box */
-.modal-content {background: radial-gradient(circle at top left,
-  /* /* #0E3B2E 5%,   */
-  black 15%, 
+.modal-content {
+  background: radial-gradient(circle at top left,
+    black 15%, 
     #0E3B2E 25%,
     #088858 40%,
     black 80%
-);
-
-  margin: 10% auto;
+  );
   padding: 30px;
   border-radius: 15px;
   width: 80%;
@@ -41,12 +40,12 @@ body {
   color: white;
   text-align: center;
   box-shadow: 0 0 25px #4DEEA5;
+  position: relative;          /* needed for close button positioning */
 }
 
 /* Close button */
-/* Close button */
 .modal .close {
-  position: absolute;      /* position it relative to modal-content */
+  position: absolute;      /* relative to modal-content */
   top: 15px;               /* distance from top */
   right: 20px;             /* distance from right */
   color: white;
@@ -58,7 +57,6 @@ body {
 .modal .close:hover {
   color: #4DEEA5;
 }
-
 
 /* Button inside modal */
 .modal .btn-reg {
@@ -72,8 +70,6 @@ body {
 }
 
 .modal .btn-reg:hover {
-  /* background-color: #ffffff;
-  color: rgb(0, 0, 0); */
   transform: scale(1.15);
 }
 
