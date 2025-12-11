@@ -24,6 +24,42 @@
       <li id="butt">Register</li>
     </ul>
   </nav>
+  <!-- POPUP MODAL -->
+<div id="eventModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <br>
+    <h2>DID U REGISTER YET ?</h2>
+    <p>If your answer is no then miss out on the golden opportunity to level-up yourself 
+      and a chance to get to know others. So 
+    </p>
+    <a href="https://forms.gle/cxpLoHBkDRgve4no8" target="_blank">
+      <button class="btn-reg">Register Now</button>
+      
+    </a>
+    <br>
+    <p>or let others take your chance.</p>
+  </div>
+</div>
+
+<script>
+  // Get modal and close button
+  const modal = document.getElementById('eventModal');
+  const closeBtn = document.querySelector('.modal .close');
+
+  // Close on click of X
+  closeBtn.onclick = function() {
+    modal.style.display = 'none';
+  }
+
+  // Optional: close if user clicks outside the modal box
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
+</script>
+
 
     <div class="container">
       <section class="sec1" id="home">
@@ -47,7 +83,7 @@
                 <div class="poster-wrap">
                   <img src="assets\prevents\pre.jpg" alt="Event Poster" />
                 </div>
-
+                <div id="setsp">
                 <div class="event-info">
                   <h3 class="one">CRAFT THE DRAFT 2.0</h3>
                   <p>
@@ -57,7 +93,7 @@
                     ratione qui omnis doloribus ipsam delectus repellendus!
                   </p>
                   <button><a href="#" class="btn-reg">Register</a></button>
-                </div>
+                </div></div>
               </div>
             </div>
 
@@ -72,8 +108,6 @@
                   <h3 class="one">CRAFT THE DRAFT 2.0</h3>
                   <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Recusandae aspernatur necessitatibus quasi esse accusamus,
-                    sit id, aperiam accusantium quas quaerat vel optio eligendi
                     ratione qui omnis doloribus ipsam delectus repellendus!
                   </p>
                   <button><a href="#" class="btn-reg">Register</a></button>
@@ -108,4 +142,6 @@
       <p>&copy; 2025 FOSS CLUB. All rights reserved.</p>
     </footer>
   </body>
+
+  
 </html>
