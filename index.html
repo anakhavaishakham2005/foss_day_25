@@ -15,55 +15,72 @@
     <title>IGNITA 2025</title>
   </head>
 
- 
   <body>
-     <nav id="nb">
-    <ul class="menu">
-      <a href="#home" class="glow"> <li >Home</li></a>
-      <a href="#events" id="navcont" class="glow"> <li>Events</li></a>
-      <li id="butt">Register</li>
-    </ul>
-  </nav>
-  <!-- POPUP MODAL -->
-<div id="eventModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <br>
-    <h2>DID U REGISTER YET ?</h2>
-    <p>If your answer is no then miss out on the golden opportunity to level-up yourself 
-      and a chance to get to know others. So 
-    </p>
-    <a href="https://forms.gle/cxpLoHBkDRgve4no8" target="_blank">
-      <button class="btn-reg">Register Now</button>
-      
-    </a>
-    <br>
-    <p>or let others take your chance.</p>
-  </div>
-</div>
+    <nav id="nb">
+      <ul class="menu">
+        <a href="#home" class="glow"> <li>Home</li></a>
+        <a href="#events" id="navcont" class="glow"> <li>Events</li></a>
+        <a href="#pre-events" id="navcont" class="glow"> <li>Pre Events</li></a>
+        <li id="butt">Register</li>
+      </ul>
+    </nav>
+    <!-- POPUP MODAL -->
+    <div id="eventModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <br />
+        <h2>DID U REGISTER YET ?</h2>
+        <p>
+          If your answer is no then miss out on the golden opportunity to
+          level-up yourself and a chance to get to know others. So
+        </p>
+        <a href="https://forms.gle/Rk9iBNYNu1uRRsDDA" target="_blank">
+          <div class="oneline">
+            <div class="ticket">
+              <div class="poster-wrap"><img src="ticket.png" alt="" /></div>
+            </div>
 
-<script>
-  // Get modal and close button
-  const modal = document.getElementById('eventModal');
-  const closeBtn = document.querySelector('.modal .close');
+            <button class="btn-reg">Register Now</button>
+          </div>
+        </a>
+        <br />
+        <p>or let others take your chance.</p>
+      </div>
+    </div>
 
-  // Close on click of X
-  closeBtn.onclick = function() {
-    modal.style.display = 'none';
-  }
+    <script>
+      // Get modal and close button
+      const modal = document.getElementById("eventModal");
+      const closeBtn = document.querySelector(".modal .close");
 
-  // Optional: close if user clicks outside the modal box
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = 'none';
-    }
-  }
-</script>
+      // Close on click of X
+      closeBtn.onclick = function () {
+        modal.style.display = "none";
+      };
 
+      // Optional: close if user clicks outside the modal box
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
 
     <div class="container">
       <section class="sec1" id="home">
         <div class="container2">
+          <div style="display: flex">
+            <div class="logo">
+              <div class="poster-wrap">
+                <img src="fosslogo.png" alt="Logo" />
+              </div>
+            </div>
+            <div class="logo">
+              <div class="poster-wrap">
+                <img src="assets/logo.png" alt="Logo" />
+              </div>
+            </div>
+          </div>
           <h1 class="foss-heading">IGNITA 2025</h1>
           <p class="tag">
             Join us for a day dedicated to Free and Open Source Software (FOSS)
@@ -72,28 +89,37 @@
           </p>
         </div>
       </section>
+      <section id="events">
+        <h2 id="pre" style="margin-top: 30px">EVENTS</h2>
+        <br />
+        <h3>Coming Soon..</h3>
+      </section>
 
-      <section id="events" class="sec">
-        <h2>Pre Events</h2>
+      <hr style="border: none; border-top: 6px dashed white; height: 2px" />
+      <br>
+      
+      <section id=" pre-events" class="sec">
+        <h2 id="pre">PRE EVENTS</h2>
+        <br />
+        <h3>Upcoming</h3>
+        <br />
+        <hr style="border: none; border-top: 6px dashed white; height: 2px" />
+
+        <br />
+        <h3>Past</h3>
         <div class="container py-5">
           <div class="row g-4 justify-content-center">
             <!-- CARD 1 -->
             <div class="col-md-4 col-10 onerow">
               <div class="event-card">
                 <div class="poster-wrap">
-                  <img src="assets\prevents\pre.jpg" alt="Event Poster" />
+                  <img src="assets/prevents/meme.png" alt="Event Poster" />
                 </div>
                 <div id="setsp">
-                <div class="event-info">
-                  <h3 class="one">CRAFT THE DRAFT 2.0</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Recusandae aspernatur necessitatibus quasi esse accusamus,
-                    sit id, aperiam accusantium quas quaerat vel optio eligendi
-                    ratione qui omnis doloribus ipsam delectus repellendus!
-                  </p>
-                  <button><a href="#" class="btn-reg">Register</a></button>
-                </div></div>
+                  <div class="event-info">
+                    <img src="assets/prevents/compbadge.png" alt="" />
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -101,35 +127,11 @@
             <div class="col-md-4 col-10 onerow">
               <div class="event-card">
                 <div class="poster-wrap">
-                  <img src="assets\prevents\pre.jpg" alt="Event Poster" />
+                  <img src="assets/prevents/crave.png" alt="Event Poster" />
                 </div>
 
                 <div class="event-info">
-                  <h3 class="one">CRAFT THE DRAFT 2.0</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    ratione qui omnis doloribus ipsam delectus repellendus!
-                  </p>
-                  <button><a href="#" class="btn-reg">Register</a></button>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 col-10 onerow">
-              <div class="event-card">
-                <div class="poster-wrap">
-                  <img src="assets\prevents\pre.jpg" alt="Event Poster" />
-                </div>
-
-                <div class="event-info">
-                  <h3 class="one">CRAFT THE DRAFT 2.0</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Recusandae aspernatur necessitatibus quasi esse accusamus,
-                    sit id, aperiam accusantium quas quaerat vel optio eligendi
-                    ratione qui omnis doloribus ipsam delectus repellendus!
-                  </p>
-                  <button><a href="#" class="btn-reg">Register</a></button>
+                  <img src="assets/prevents/compbadge.png" alt="" />
                 </div>
               </div>
             </div>
@@ -142,6 +144,4 @@
       <p>&copy; 2025 FOSS CLUB. All rights reserved.</p>
     </footer>
   </body>
-
-  
 </html>

@@ -285,6 +285,9 @@ button{
   navbar{
     height: 10%;
   }
+  .ticket{
+    margin-left: 0px;
+  }
 
 }
 
@@ -309,3 +312,40 @@ footer{
     margin-top: 20px;
     
   }
+
+  .logo
+  { display: flex;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 15px #20ef92;
+    margin:auto;
+    margin-bottom: 30px;
+  }
+
+  .ticket{
+    height: 100px;
+    width: 100px;
+    margin-left: -40px;
+    overflow: hidden;
+  }
+  .oneline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+@media (max-width: 768px) {
+  .ticket{
+    margin-left: -20px;
+  }
+}
+
+#pre{
+  text-align: center;
+  font-size: 40px;
+  text-shadow: 0 0 15px #20ef92;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
